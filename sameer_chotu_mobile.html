@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sameer Chotu — Troll Zone 😂</title>
+<style>
+:root{--bg:#080b10;--panel:#111821;--yellow:#ffd83d;--text:#f6f7fb;--muted:#b8c0ce;--line:#26303d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 0%,#1b2230 0,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#080b10eF;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:900;font-size:1.25rem;letter-spacing:-.5px}.logo span{color:var(--yellow)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:.92rem}nav a:hover{color:var(--yellow)}
+main{max-width:1120px;margin:auto;padding:28px 22px 60px}
+.hero{min-height:390px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:34px;padding:45px 0}
+.tag{display:inline-block;border:1px solid #5b4d12;background:#2a240b;color:var(--yellow);border-radius:999px;padding:7px 12px;font-size:.8rem;font-weight:800}
+h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:.98;letter-spacing:-3px;margin:18px 0}
+h1 span{color:var(--yellow)}.sub{color:var(--muted);font-size:1.1rem;line-height:1.7;max-width:590px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+button,.button{border:0;border-radius:12px;padding:13px 18px;font:inherit;font-weight:850;cursor:pointer;transition:transform .15s,filter .15s;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+button:hover,.button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.primary{background:var(--yellow);color:#171717}.secondary{background:#171f2a;color:var(--text);border:1px solid #364151}
+.hero-card{background:linear-gradient(145deg,#1b2430,#10151c);border:1px solid #303b49;border-radius:26px;padding:26px;transform:rotate(1deg);box-shadow:0 22px 60px #0006}
+.sticker{font-size:5rem;text-align:center;line-height:1.3}.hero-card h2{text-align:center;font-size:1.6rem;margin:8px 0}.hero-card p{text-align:center;color:var(--muted);line-height:1.6}
+.tape{display:inline-block;background:var(--yellow);color:#161616;padding:6px 12px;font-weight:900;transform:rotate(-3deg);margin:8px auto;display:table}
+section{margin-top:42px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}.section-title h2{font-size:1.8rem;margin:0;letter-spacing:-.8px}.section-title p{margin:0;color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(150deg,#131a23,#0d1218);border:1px solid var(--line);border-radius:18px;padding:22px;min-width:0}
+.card .emoji{font-size:2rem}.card h3{margin:12px 0 8px}.card p{color:var(--muted);line-height:1.6;margin:0 0 16px}
+.roast-output{background:#080c12;border:1px dashed #4a5361;border-radius:14px;padding:20px;min-height:90px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.12rem;font-weight:750;line-height:1.55;margin:15px 0}
+.generator{max-width:720px;margin:auto}.generator-controls{display:flex;gap:10px;flex-wrap:wrap}.generator-controls button{flex:1}
+.meter{height:9px;background:#28313d;border-radius:999px;overflow:hidden;margin:14px 0}.meter span{height:100%;display:block;width:72%;background:var(--yellow);border-radius:999px;transition:width .4s}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.fact{padding:18px;background:#101720;border:1px solid var(--line);border-radius:14px}.fact strong{display:block;color:var(--yellow);font-size:1.6rem}.fact span{color:var(--muted);font-size:.9rem}
+.wall{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.wall-item{min-height:150px;border-radius:16px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#171d27;border:1px solid #333c49}.wall-item:nth-child(2){transform:rotate(1deg)}.wall-item:nth-child(3){transform:rotate(-1deg)}.wall-item .big{font-size:2.1rem}.wall-item small{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:25px 20px;text-align:center;color:var(--muted)}footer strong{color:var(--yellow)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:var(--yellow);color:#111;font-weight:850;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}
+.confetti{position:fixed;top:-20px;font-size:22px;pointer-events:none;z-index:9;animation:fall 1.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}
+@media(max-width:760px){
+  main{padding:18px 14px 42px}
+  .nav{align-items:flex-start;flex-direction:column;padding:13px 15px;gap:10px}
+  nav{width:100%;gap:8px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}
+  nav a{white-space:nowrap;padding:7px 10px;background:#121923;border-radius:999px;font-size:.84rem}
+  .hero{grid-template-columns:1fr;padding:27px 0;gap:22px;min-height:auto}
+  .hero-card{transform:none;padding:20px}
+  h1{font-size:clamp(2.8rem,14vw,4.3rem);letter-spacing:-1.8px}
+  .sub{font-size:1rem}
+  .actions{display:grid;grid-template-columns:1fr}
+  .actions .button,.actions button{width:100%}
+  .grid,.facts,.wall{grid-template-columns:1fr}
+  .section-title{align-items:flex-start;flex-direction:column}
+  section{margin-top:32px}
+  .card{padding:18px}
+  .generator-controls{display:grid;grid-template-columns:1fr}
+  .generator-controls button{width:100%}
+  .roast-output{font-size:1rem;padding:17px}
+  .wall-item:nth-child(2),.wall-item:nth-child(3){transform:none}
+  footer{padding:22px 14px;line-height:1.7}
+}
+@media(min-width:420px) and (max-width:760px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid .card:last-child{grid-column:1/-1}
+  .facts{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fact{padding:13px 10px}
+  .fact strong{font-size:1.35rem}
+}
+@media(max-width:360px){.logo{font-size:1.1rem}h1{font-size:2.65rem}.tag{font-size:.7rem}.fact span{font-size:.8rem}}
+
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">SAMEER <span>CHOTU</span> 😂</div><nav><a href="#roasts">Roasts</a><a href="#generator">Troll Generator</a><a href="#facts">Fun Facts</a><a href="#wall">Meme Wall</a></nav></div></header>
+<main>
+  <section class="hero" id="home">
+    <div><span class="tag">⚠️ FRIENDSHIP-LEVEL TROLLING ONLY</span><h1>Welcome to<br><span>Chotu</span> Zone.</h1><p class="sub">Yeh hai Sameer ka unofficial troll corner. Thodi bakchodi, thode memes, aur dosti wali roasting. Dil pe nahi lena, bhai. 😂</p><div class="actions"><a class="button primary" href="#generator">Roast generator kholo ↘</a><button class="secondary" id="surpriseBtn">Surprise me 🎲</button></div></div>
+    <div class="hero-card"><div class="sticker">🕶️👑</div><div class="tape">CERTIFIED CHOTU</div><h2>Sameer Bhai™</h2><p>Attitude: Premium<br>Planning: Buffering…<br>Legend status: Under review</p></div>
+  </section>
+
+  <section id="roasts"><div class="section-title"><h2>🔥 Fresh roast menu</h2><p>Friendly fire only, bhai.</p></div><div class="grid">
+    <article class="card"><div class="emoji">🧠</div><h3>Brain loading...</h3><p>Sameer ka idea itna late aata hai ki tab tak meeting khatam ho jaati hai.</p><button class="secondary copy-roast" data-roast="Sameer ka idea itna late aata hai ki tab tak meeting khatam ho jaati hai.">Use this roast ↗</button></article>
+    <article class="card"><div class="emoji">📶</div><h3>Network issue</h3><p>Sameer ki planning full signal pe bhi “connecting…” hi rehti hai.</p><button class="secondary copy-roast" data-roast="Sameer ki planning full signal pe bhi connecting hi rehti hai.">Use this roast ↗</button></article>
+    <article class="card"><div class="emoji">🏆</div><h3>Participation legend</h3><p>Competition mein Sameer ka confidence first aata hai. Result baad mein dekhenge.</p><button class="secondary copy-roast" data-roast="Competition mein Sameer ka confidence first aata hai. Result baad mein dekhenge.">Use this roast ↗</button></article>
+  </div></section>
+
+  <section id="generator"><div class="section-title"><h2>🎲 Troll line generator</h2><p>Button dabao, naya taana paao.</p></div><div class="card generator"><div class="roast-output" id="roastOutput" aria-live="polite">“Sameer bhai ka swag 4K, par common sense abhi 144p pe hai.”</div><div class="generator-controls"><button class="primary" id="generateBtn">Generate troll line 😂</button><button class="secondary" id="copyBtn">Copy line 📋</button><button class="secondary" id="laughBtn">Make it rain 🎉</button></div><div class="meter"><span id="meterFill"></span></div><small style="color:var(--muted)">Roast intensity: <b id="intensity">Friendly banter</b> — dosti safe rehni chahiye ❤️</small></div></section>
+
+  <section id="facts"><div class="section-title"><h2>📊 Totally unofficial stats</h2><p>Scientific? Bilkul nahi.</p></div><div class="facts"><div class="fact"><strong>99%</strong><span>Confidence level (self-reported)</span></div><div class="fact"><strong>2G</strong><span>Brain processing speed, allegedly</span></div><div class="fact"><strong>∞</strong><span>Excuses in stock</span></div></div></section>
+
+  <section id="wall"><div class="section-title"><h2>🧱 Meme wall</h2><p>Screenshot le, group mein bhej 😭</p></div><div class="wall"><div class="wall-item"><span class="big">🫡</span><strong>“Main sab sambhaal lunga.”</strong><small>— Famous last words of the group planner</small></div><div class="wall-item"><span class="big">⏳</span><strong>“Bas 2 minute mein aaya.”</strong><small>Translation: ETA unknown</small></div><div class="wall-item"><span class="big">🧠💨</span><strong>“Bhai, ek idea hai…”</strong><small>Everyone else: Here we go again.</small></div></div></section>
+</main>
+<footer>Made with <strong>😂 & dosti</strong> · Sameer Chotu Troll Zone · <span id="year"></span><br><small>Private joke page — share it with friends, not strangers. Keep it funny, not hurtful.</small></footer>
+<div class="toast" id="toast" role="status">Done!</div>
+<script>
+const roasts = [
+  "Sameer bhai ka swag 4K, par common sense abhi 144p pe hai. 😂",
+  "Sameer ki planning itni secret hai ki khud Sameer ko bhi nahi pata. 🕵️",
+  "Bhai ka confidence dekh ke lagta hai result pehle hi declare kar diya. 🏆",
+  "Sameer ka ‘bas 2 minute’ NASA ke time zone mein aata hai. 🚀",
+  "Sameer multitasking karta hai: ek saath sabko confuse aur khud bhi confused. 🤹",
+  "Sameer ka brain kabhi-kabhi airplane mode pe chala jaata hai. ✈️",
+  "Style full battery, execution power-saving mode. 🔋",
+  "Sameer group ka plot twist hai — kisi ko samajh nahi aata ab kya karega. 🎬",
+  "Bhai ka logic itna unique hai, Google bhi bolta hai: tu hi bata. 🔎",
+  "Sameer ka future bright hai… bas loading screen hatne do. 🌟"
+];
+const output=document.getElementById('roastOutput'), toast=document.getElementById('toast');
+let last=-1;
+function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('show'),1900)}
+function generate(){let i;do{i=Math.floor(Math.random()*roasts.length)}while(i===last);last=i;output.textContent='“'+roasts[i]+'”';document.getElementById('meterFill').style.width=(35+Math.random()*60)+'%';document.getElementById('intensity').textContent=['Soft roast','Extra crispy','Dosti-level danger'][Math.floor(Math.random()*3)]}
+document.getElementById('generateBtn').addEventListener('click',generate);
+document.getElementById('surpriseBtn').addEventListener('click',()=>{generate();document.getElementById('generator').scrollIntoView({behavior:'smooth'});showToast('Surprise roast unlocked 😂')});
+document.getElementById('copyBtn').addEventListener('click',async()=>{const text=output.textContent.replace(/^“|”$/g,'');try{await navigator.clipboard.writeText(text);showToast('Roast copied! 📋')}catch(e){showToast('Select the line and copy it!')}});
+document.getElementById('laughBtn').addEventListener('click',()=>{for(let i=0;i<24;i++){const el=document.createElement('span');el.className='confetti';el.textContent=['😂','🤣','🎉','💀','✨'][Math.floor(Math.random()*5)];el.style.left=Math.random()*100+'vw';el.style.animationDelay=Math.random()*.7+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),2600)}showToast('Laughter incoming!')});
+document.querySelectorAll('.copy-roast').forEach(btn=>btn.addEventListener('click',async()=>{output.textContent='“'+btn.dataset.roast+'”';document.getElementById('generator').scrollIntoView({behavior:'smooth'});showToast('Roast selected 🔥')}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
