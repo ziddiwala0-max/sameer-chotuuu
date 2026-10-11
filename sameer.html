@@ -1,0 +1,380 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sameer Chotu 😂</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080b10;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 15px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 5px;
+  border-bottom: 1px solid #303744;
+}
+
+header h2 {
+  font-size: 25px;
+}
+
+header span {
+  color: #ffdc35;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 45px 5px 30px;
+}
+
+.tag {
+  color: #ffdc35;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(38px, 10vw, 60px);
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+h1 span {
+  color: #ffdc35;
+}
+
+p {
+  color: #bdc5d2;
+  line-height: 1.6;
+}
+
+button {
+  background: #ffdc35;
+  color: #111;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+.hero-card {
+  background: #151c27;
+  border: 1px solid #303b49;
+  border-radius: 18px;
+  padding: 25px 15px;
+  margin-top: 25px;
+}
+
+.hero-card .emoji {
+  font-size: 65px;
+}
+
+section {
+  margin: 30px 0;
+}
+
+section h2 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #121821;
+  border: 1px solid #293341;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.output {
+  background: #080b10;
+  border: 1px dashed #596273;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.6;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat {
+  background: #151c27;
+  border-radius: 12px;
+  padding: 12px 5px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.stat strong {
+  display: block;
+  color: #ffdc35;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.stat small {
+  color: #bdc5d2;
+  font-size: 11px;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #303744;
+  padding: 25px 5px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (min-width: 700px) {
+  body {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+  }
+
+  .hero {
+    padding: 65px 20px 35px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  button {
+    width: auto;
+  }
+
+  .output {
+    font-size: 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>SAMEER <span>CHOTU</span> 😂</h2>
+  <nav>
+    <a href="#roasts">Roasts</a>
+    <a href="#generator">Troll Generator</a>
+    <a href="#facts">Fun Facts</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tag">⚠️ FRIENDSHIP TROLL ZONE</div>
+
+  <h1>Welcome to<br><span>Chotu Zone.</span></h1>
+
+  <p>
+    Bhai Sameer ki unofficial website!
+    Yahan milega dosti wala roast, memes
+    aur unlimited bakchodi. 😂
+  </p>
+
+  <button onclick="generateRoast()">
+    TROLL SAMEER 😂
+  </button>
+
+  <div class="hero-card">
+    <div class="emoji">🕶️👑</div>
+    <h2 style="margin:10px;">Sameer Bhai™</h2>
+    <p>Attitude: 100%</p>
+    <p>Planning: Loading...</p>
+    <p>Legend status: Under Review 💀</p>
+  </div>
+</div>
+
+<section id="roasts">
+  <h2>🔥 Roast Menu</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>🧠 Brain.exe</h3>
+      <p>Sameer ka dimaag kabhi kabhi
+      buffering pe chala jaata hai.</p>
+      <button onclick="showRoast(0)">Roast karo</button>
+    </div>
+
+    <div class="card">
+      <h3>📶 Network Issue</h3>
+      <p>Sameer ki planning full signal
+      pe bhi connecting hi rehti hai.</p>
+      <button onclick="showRoast(1)">Roast karo</button>
+    </div>
+
+    <div class="card">
+      <h3>🏆 Confidence King</h3>
+      <p>Confidence aisa jaise trophy
+      mil chuki ho, result baad mein aayega.</p>
+      <button onclick="showRoast(2)">Roast karo</button>
+    </div>
+
+    <div class="card">
+      <h3>⏳ Time Machine</h3>
+      <p>Sameer ka “2 minute mein aaya”
+      alag hi time zone mein chalta hai.</p>
+      <button onclick="showRoast(3)">Roast karo</button>
+    </div>
+  </div>
+</section>
+
+<section id="generator">
+  <h2>🎲 Troll Generator</h2>
+
+  <div class="card">
+    <p>Button dabao aur Sameer ke liye
+    ek naya funny taana generate karo.</p>
+
+    <div class="output" id="output">
+      Sameer bhai ka swag 4K,
+      par common sense 144p. 😂
+    </div>
+
+    <button onclick="generateRoast()">
+      Generate New Roast 🎲
+    </button>
+
+    <button onclick="copyRoast()"
+      style="background:#263242;color:white;">
+      Copy Roast 📋
+    </button>
+  </div>
+</section>
+
+<section id="facts">
+  <h2>📊 Unofficial Stats</h2>
+
+  <div class="stats">
+    <div class="stat">
+      <strong>99%</strong>
+      <small>Confidence</small>
+    </div>
+
+    <div class="stat">
+      <strong>2G</strong>
+      <small>Brain Speed</small>
+    </div>
+
+    <div class="stat">
+      <strong>∞</strong>
+      <small>Excuses</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Made with 😂 and dosti ❤️<br><br>
+  Sameer Chotu Troll Zone
+</footer>
+
+<script>
+const roasts = [
+  "Sameer bhai ka swag 4K, par common sense 144p. 😂",
+  "Sameer ki planning itni secret hai ki khud ko bhi nahi pata. 💀",
+  "Confidence trophy-level, preparation tutorial-level. 🏆",
+  "Sameer ka '2 minute' NASA ke time zone mein aata hai. 🚀",
+  "Bhai ka brain kabhi kabhi airplane mode pe chala jaata hai. ✈️",
+  "Sameer ka future bright hai, bas loading screen hatne do. 😂",
+  "Sameer ek limited edition hai. Manual abhi tak nahi mila. 🤣",
+  "Bhai ki logic sunke calculator bhi restart maangta hai. 🧮"
+];
+
+let currentRoast = roasts[0];
+
+function generateRoast() {
+  let roast = roasts[
+    Math.floor(Math.random() * roasts.length)
+  ];
+
+  currentRoast = roast;
+
+  document.getElementById("output").textContent = roast;
+
+  if (navigator.vibrate) {
+    navigator.vibrate(50);
+  }
+}
+
+function showRoast(index) {
+  currentRoast = roasts[index];
+
+  document.getElementById("output").textContent =
+    currentRoast;
+
+  document.getElementById("generator")
+    .scrollIntoView({ behavior: "smooth" });
+}
+
+async function copyRoast() {
+  try {
+    await navigator.clipboard.writeText(currentRoast);
+    alert("Roast copied! Ab group mein bhej 😂");
+  } catch (error) {
+    alert("Roast: " + currentRoast +
+      "\nIsko long-press karke copy kar le!");
+  }
+}
+</script>
+
+</body>
+</html>
+```
